@@ -71,8 +71,7 @@ section .container .box .imgBx {
     height: 100%;
     transition: 0.5s;
     opacity: 0.8;
-    filter: grayscale(0);
-    z-index: 2;
+    z-index: 1;
 }
 
 section .container .box .imgBx:hover {
@@ -91,19 +90,16 @@ section .container .box .imgBx img {
 }
 
 section .container .box .texto {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-    opacity: 0;
-    z-index: 1;
+    position:relative;
+    top: 45%;
+    z-index: 2;
 }
 
-section .container .box .texto:hover {
-    
+section .container .box .texto h3 {
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 1px 12px rgba(37, 37, 37, 1);
 }
 
 .footer {
