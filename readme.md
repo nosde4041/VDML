@@ -1,5 +1,5 @@
 # Site VDML Serviços Gerais
-O trabalho tem, como objetivo inicial, a criação de um site simples contendo um área de contato para os usuários.
+O trabalho tem como objetivo inicial, a criação de um site simples contendo um área de contato para os usuários.
 Com o decorrer dos trabalhos, novas funcionalidades poderão ser adicionadas ao projeto, como uma área para cadastro de currículos e um serviço de mensagens para uso exclusivo do funcionários da empresa. 
 
 # Linguagens e Tecnologias Utilizadas no Desenvolvimento
