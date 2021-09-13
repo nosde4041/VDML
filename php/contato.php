@@ -8,7 +8,9 @@
     use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\SMTP;
 
-    if(isset($_POST[email]) && !empty($_POST[email])){
+    $sendMail = new PHPMailer(true);
+
+    if(isset($_POST['email']) && !empty($_POST['email'])){
         $nome = addslashes($_POST['nome']);
         $fone = addslashes($_POST['fone']);
         $email = addslashes($_POST['email']);
@@ -20,7 +22,7 @@
             $sendMail->SMTPDebug = SMTP::DEBUG_SERVER;
             $sendMail->isSMTP();
             $sendMail->Host = "smtp.gmail.com";
-            $sendmail->SMTPAuth = true;
+            $sendMail->SMTPAuth = true;
             $sendMail->Username = "birigui.escolar@gmail.com";
             $sendMail->Password = "bram2014";
             $sendMail->Port = 587;
@@ -30,13 +32,13 @@
 
             $sendMail->isHTML(true);
             $sendMail->Subject = "Contato VDML";
-            $sendMail->Body = "Mensagem de teste de <strong>TI Brambilla</strong>";
-            $sendMail->AltBody = "Mensagem de teste de TI Brambilla";
+            $sendMail->Body = $msg;
+            $sendMail->AltBody = $msg;
 
-            if($sendmail->send()){
+            if($sendMail->send()){
                 echo "Sucesso";
             }else{
-                echo "Não enviado"
+                echo "Não enviado";
             }
             
         }catch (Exception $e){
